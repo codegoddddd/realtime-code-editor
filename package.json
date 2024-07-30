@@ -22,7 +22,7 @@
   "scripts": {
     "start:front": "react-scripts start",
     "start": "node server.js",
-    "build": "cd frontend && npm install && npm run build",
+    "build": "npm install && npm run build",
     "server:dev": "nodemon server.js",
     "server:prod": "node server.js",
     "test": "react-scripts test",
