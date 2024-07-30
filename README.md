@@ -1,4 +1,3 @@
-```markdown
 # Real-Time Code Editor
 
 A full-stack real-time code editor that allows multiple users to collaborate on coding projects simultaneously. Built with React, Node.js, Express.js, and Socket.io, and deployed on Heroku.
