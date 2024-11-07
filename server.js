@@ -10,9 +10,10 @@ const io = new Server(server);
 
 // Set Content Security Policy header
 app.use((req, res, next) => {
-    res.setHeader("Content-Security-Policy", "default-src 'self'; script-src 'self' https://vercel.live; style-src 'self' 'unsafe-inline';");
+    res.setHeader("Content-Security-Policy", "default-src 'self'; frame-src 'self' https://vercel.live;");
     next();
 });
+
 
 // Serve static files from the 'build' directory
 app.use(express.static(path.join(__dirname, 'build')));
