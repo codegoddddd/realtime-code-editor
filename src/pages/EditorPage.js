@@ -66,6 +66,7 @@ const EditorPage = () => {
             );
         };
         init();
+        // cleaning function
         return () => {
             socketRef.current.disconnect();
             socketRef.current.off(ACTIONS.JOINED);
