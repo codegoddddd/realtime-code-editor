@@ -14,7 +14,6 @@ app.use((req, res, next) => {
     next();
 });
 
-
 // Serve static files from the 'build' directory
 app.use(express.static(path.join(__dirname, 'build')));
 
@@ -68,12 +67,14 @@ io.on('connection', (socket) => {
     });
 });
 
-// Catch-all handler for SPA routing
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'build', 'index.html'));
+// Get the PORT from environment variables or use 4000 as a default
+const PORT = process.env.PORT || 4000;
+
+// Start the server on the specified port
+server.listen(PORT, '0.0.0.0', () => {
+    console.log(`Server is running on port ${PORT}`);
 });
 
-module.exports = app; // Vercel expects the exported app in serverless functions
 
 
 
